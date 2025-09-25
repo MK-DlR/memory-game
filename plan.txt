@@ -1,0 +1,30 @@
+1. create basic structure
+    a. header section
+        a1. title
+        a2. instructions
+    c. scoreboard section
+        c1. score
+        c2. best score
+    d. cards section
+        d1. individual cards (12)
+            - image
+            - text (optional)
+
+2. card shuffling function
+    a. anytime a card is clicked
+        a1. all cards are displayed in a random order
+            - should be invoked when the component mounts
+
+3. score is incremented on successful card click
+    a. ie, a card that has not yet been selected is chosen
+    b. game ends on selecting an already selected card
+        b1. if highest score, should be logged in "best score"
+
+4. use api to get
+    a. to get
+        - images
+        - text (optional)
+    b. display on cards
+
+
+needed components
