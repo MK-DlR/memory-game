@@ -1,5 +1,7 @@
 9/25/25:
 
+- Map array into cards
+- Create array of objects for cards
 - Set up and link component files
 
 9/24/25:

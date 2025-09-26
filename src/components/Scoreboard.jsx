@@ -1,13 +1,10 @@
 // Scoreboard.jsx
 
-// score
-// best score
-
 function Scoreboard() {
-
     return (
-        <div>
-            i'm a scoreboard
+        <div className="score-container">
+            <b>Score:</b> [score variable here]<br />
+            <b>Best Score:</b> [best score variable here]
         </div>
     )
 }

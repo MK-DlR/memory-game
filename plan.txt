@@ -2,29 +2,58 @@
     a. header section
         a1. title
         a2. instructions
+    Done
     c. scoreboard section
         c1. score
         c2. best score
+    Done
     d. cards section
-        d1. individual cards (12)
+        d1. individual cards
             - image
-            - text (optional)
+            - text 
+    Done
+Done
 
-2. card shuffling function
+2. function to create necessary amount of cards (12)
+    a. display with:
+        a1. image
+        a2. text
+    b. create an array with the 12 items
+        b1. map them into the cards
+Done
+
+3. use api to get
+    a. to get
+        - images
+        - text
+    b. display on cards
+    c. notes: 
+        - need to use useEffect for api with fetch method
+Wip
+
+4. card shuffling function
     a. anytime a card is clicked
         a1. all cards are displayed in a random order
             - should be invoked when the component mounts
 
-3. score is incremented on successful card click
+5. score is incremented on successful card click
     a. ie, a card that has not yet been selected is chosen
     b. game ends on selecting an already selected card
         b1. if highest score, should be logged in "best score"
 
-4. use api to get
-    a. to get
-        - images
-        - text (optional)
-    b. display on cards
+6. add styling
+    a. header section
+        a1. title
+        a2. instructions
+        a3. scoreboard
+    b. card section
+        b1. container itself
+        b2. individual cards
+    c. custom font/s?
+    d. colors
+    e. hover/click effects
 
-
-needed components
+resources:
+- https://ghibliapi.vercel.app/#section/Studio-Ghibli-API
+- https://www.theodinproject.com/lessons/node-path-javascript-working-with-apis
+- https://www.geeksforgeeks.org/reactjs/how-to-fetch-data-from-an-api-in-reactjs/
