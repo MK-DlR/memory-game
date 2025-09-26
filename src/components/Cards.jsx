@@ -34,7 +34,7 @@ function Cards() {
     if (!dataIsLoaded) {
         return (
             <div>
-                <h1>Please wait...</h1>
+                <h1 className="loading">Loading game...</h1>
             </div>
         )
     }
@@ -42,7 +42,11 @@ function Cards() {
     return (
         <div className="card-container">
                 {items.map(item => (
-                    <div key={item.id} className="card-single">
+                    <div 
+                        key={item.id} 
+                        className="card-single"
+                        onClick={() => console.log(`You clicked: ${item.id}`)}
+                    >
                         <img src={item.image} alt={item.name} className="card-image"/>
                         <h3>{item.name}</h3>
                     </div>

@@ -1,5 +1,6 @@
 9/26/25:
 
+- Add basic onClick event to cards
 - Add basic card styling
 - Randomize chosen items on page refresh
 - Use Bob's Burgers api to create cards

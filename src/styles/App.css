@@ -6,6 +6,10 @@
     justify-content: center;
 }
 
+.loading {
+    text-align: center;
+}
+
 .card-single {
     border: 1px solid black;
     border-radius: 5px;
