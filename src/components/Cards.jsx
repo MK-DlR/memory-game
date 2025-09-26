@@ -19,6 +19,7 @@ function getRandomItems(array, count) {
 function Cards() {
     const [items, setItems] = useState([]);
     const [dataIsLoaded, setDataIsLoaded] = useState(false);
+    // useEffect to fetch api
     useEffect(() => {
         fetch("https://bobsburgers-api.herokuapp.com/storeNextDoor")
         .then((res) => res.json())
@@ -29,6 +30,7 @@ function Cards() {
             setDataIsLoaded(true);
         });
     }, []);
+    // loading message
     if (!dataIsLoaded) {
         return (
             <div>
@@ -41,7 +43,7 @@ function Cards() {
         <div className="card-container">
                 {items.map(item => (
                     <div key={item.id} className="card-single">
-                        <img src={item.image} alt={item.name} />
+                        <img src={item.image} alt={item.name} className="card-image"/>
                         <h3>{item.name}</h3>
                     </div>
                 ))}

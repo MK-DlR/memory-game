@@ -18,8 +18,7 @@ Done
     a. display with:
         a1. image
         a2. text
-    b. create an array with the 12 items
-        b1. map them into the cards
+    b. map them into cards
 Done
 
 3. use api
@@ -53,6 +52,7 @@ Done
     c. custom font/s?
     d. colors
     e. hover/click effects
+Wip
 
 resources:
 - https://www.bobsburgersapi.com/documentation#storeNextDoor/all

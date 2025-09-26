@@ -1,1 +1,35 @@
 /* App.css */
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-single {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 280px;
+    height: 370px;
+    margin: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-single:hover {
+    transform: scale(1.1); /* increase size by 10% */
+}
+
+.card-image {
+    border-radius: 3%;
+    width: 265px;
+    height: 265px;
+    display: block;
+    margin-top: 7px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 15px;
+}
