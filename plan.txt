@@ -22,14 +22,15 @@ Done
         b1. map them into the cards
 Done
 
-3. use api to get
+3. use api
     a. to get
         - images
         - text
     b. display on cards
-    c. notes: 
+    c. random 12 per page refresh
+    d. notes: 
         - need to use useEffect for api with fetch method
-Wip
+Done
 
 4. card shuffling function
     a. anytime a card is clicked
@@ -54,6 +55,6 @@ Wip
     e. hover/click effects
 
 resources:
-- https://ghibliapi.vercel.app/#section/Studio-Ghibli-API
+- https://www.bobsburgersapi.com/documentation#storeNextDoor/all
 - https://www.theodinproject.com/lessons/node-path-javascript-working-with-apis
 - https://www.geeksforgeeks.org/reactjs/how-to-fetch-data-from-an-api-in-reactjs/

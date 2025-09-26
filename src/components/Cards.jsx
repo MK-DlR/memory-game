@@ -1,75 +1,48 @@
 // Cards.jsx
 
-const cardArray = [
-        {
-            id: "1",
-            text: "test text 1",
-            image: "image will go here",
-        },
-        {
-            id: "2",
-            text: "test text 2",
-            image: "image will go here",
-        },
-        {
-            id: "3",
-            text: "test text 3",
-            image: "image will go here",
-        },
-        {
-            id: "4",
-            text: "test text 4",
-            image: "image will go here",
-        },
-        {
-            id: "5",
-            text: "test text 5",
-            image: "image will go here",
-        },
-        {
-            id: "6",
-            text: "test text 6",
-            image: "image will go here",
-        },
-        {
-            id: "7",
-            text: "test text 7",
-            image: "image will go here",
-        },
-        {
-            id: "8",
-            text: "test text 8",
-            image: "image will go here",
-        },
-        {
-            id: "9",
-            text: "test text 9",
-            image: "image will go here",
-        },
-        {
-            id: "10",
-            text: "test text 10",
-            image: "image will go here",
-        },
-        {
-            id: "11",
-            text: "test text 11",
-            image: "image will go here",
-        },
-        {
-            id: "12",
-            text: "test text 12",
-            image: "image will go here",
-        },
-    ];
+import { useState, useEffect } from "react";
+
+function getRandomItems(array, count) {
+    // make a copy to not modify the original
+    const shuffled = [...array];
+    
+    // fisher-yates shuffle algorithm
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const randomIndex = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[randomIndex]] = [shuffled[randomIndex], shuffled[i]];
+    }
+    
+    // return the first 'count' items
+    return shuffled.slice(0, count);
+}
 
 function Cards() {
+    const [items, setItems] = useState([]);
+    const [dataIsLoaded, setDataIsLoaded] = useState(false);
+    useEffect(() => {
+        fetch("https://bobsburgers-api.herokuapp.com/storeNextDoor")
+        .then((res) => res.json())
+        .then((json) => {
+            // pick 12 random stores
+            const randomSelection = getRandomItems(json, 12);
+            setItems(randomSelection);
+            setDataIsLoaded(true);
+        });
+    }, []);
+    if (!dataIsLoaded) {
+        return (
+            <div>
+                <h1>Please wait...</h1>
+            </div>
+        )
+    }
+
     return (
         <div className="card-container">
-                {cardArray.map(card => (
-                    <div key={card.id} className="card-single">
-                        <p>{card.image}</p>
-                        <h3>{card.text}</h3>
+                {items.map(item => (
+                    <div key={item.id} className="card-single">
+                        <img src={item.image} alt={item.name} />
+                        <h3>{item.name}</h3>
                     </div>
                 ))}
         </div>
