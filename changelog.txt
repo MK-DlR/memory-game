@@ -1,5 +1,6 @@
 9/27/25:
 
+- Change fonts and colors
 - Adjust card spacing for hover effects
 - Add fonts and adjust font sizes
 - Add win conditions

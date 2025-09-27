@@ -7,7 +7,7 @@ function Header({ currentScore, highScore }) {
         <div className="header-container">
             <div className="header-top">
                 <div className="header-title">
-                    <h1>Bob's Burgers Memory Game</h1>
+                    <h1>BOB'S BURGERS MEMORY GAME</h1>
                 </div>
                 <Scoreboard currentScore={currentScore} highScore={highScore} />
             </div>

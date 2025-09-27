@@ -1,36 +1,15 @@
 /* App.css */
 
-/*
-Primary Colors:
-yellow: #EFEF72 / #F8DF26 
-red: #B82210 / #EE2330
-
-Additional Colors:
-dark blue: #2D5CA5
-light blue: #B5CFE6
-maroon: #6A1023
-mustard: #E5BD3D
-tan: #D3A85C
-orange: #DB821F
-*/
-
 @font-face {
-    font-family: 'bobs-burgers';
-    src: url('../assets/fonts/Bobs-Burgers.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'bobs-burgers2';
-    src: url('../assets/fonts/Bobs-Burgers-2.ttf') format('truetype');
-}
-
-h1, h3 {
-    font-family: 'bobs-burgers', sans-serif;
+    font-family: 'gelembung';
+    src: url('../src/assets/fonts/GELEMBUNG.ttf') format('truetype');
 }
 
 h1 {
     font-size: 75px;
-    font-family: 'bobs-burgers', sans-serif;
+    font-family: 'gelembung', sans-serif;
+    color: #EE232F;
+    text-shadow: -4px 4px black; /* Drop shadow to left and bottom */
 }
 
 h3 {
@@ -40,12 +19,12 @@ h3 {
 
 .header-container, h3 {
     text-align: center;
-    margin-top: 15px;
 }
 
 .header-container {
-    margin-top: 15px;
+    padding-top: 20px;
     position: relative; 
+    background-color: #F8DF25;
 }
 
 .header-top {
@@ -58,11 +37,14 @@ h3 {
 
 .header-title {
     position: relative;
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .score-container {
-    font-family: 'bobs-burgers', sans-serif;
-    font-size: 30px;
+    font-family: 'gelembung', sans-serif;
+    font-size: 20px;
     text-align: right;
     position: absolute;
     top: 50%; 
@@ -75,6 +57,7 @@ h3 {
 .header-description {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
@@ -90,8 +73,9 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 20px; /* allow space for top row of cards on hover */
-    margin-bottom: 20px;
+    padding-top: 20px; /* allow space for top row of cards on hover */
+    padding-bottom: 20px;
+    background-color: #B2CEE6;
 }
 
 .card-single {
@@ -104,11 +88,12 @@ h3 {
     margin: 15px;
     margin-bottom: 30px;
     transition: transform 0.3s ease-in-out;
+    background-color: #F9F86A;
 }
 
 .card-single:hover {
     transform: scale(1.1); /* increase size by 10% */
-    box-shadow: -10px 10px;
+    box-shadow: -7px 7px;
     transition: 0.4s;
 }
 
@@ -131,7 +116,7 @@ h3 {
     margin-left: 5px;
     margin-right: 5px;
     color: black; 
-    background-color: #F5F5DC; /* placeholder */
+    background-color: #ffffeb;
     border-radius: 5px;
     margin: 5px;
 }
