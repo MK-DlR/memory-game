@@ -45,7 +45,20 @@ function Cards() {
                     <div 
                         key={item.id} 
                         className="card-single"
-                        onClick={() => console.log(`You clicked: ${item.id}`)}
+                        onClick={() => 
+                            {
+                                console.log(`You clicked: ${item.id}`)
+                                // make a copy to not modify the original
+                                    const shuffled = [...items];
+                                    
+                                    // fisher-yates shuffle algorithm
+                                    for (let i = shuffled.length - 1; i > 0; i--) {
+                                        const randomIndex = Math.floor(Math.random() * (i + 1));
+                                        [shuffled[i], shuffled[randomIndex]] = [shuffled[randomIndex], shuffled[i]];
+                                    }
+                                    setItems(shuffled);
+                            }
+                        }
                     >
                         <img src={item.image} alt={item.name} className="card-image"/>
                         <h3>{item.name}</h3>

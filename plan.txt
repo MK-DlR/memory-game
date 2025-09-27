@@ -34,7 +34,7 @@ Done
 4. card shuffling function
     a. anytime a card is clicked
         a1. all cards are displayed in a random order
-            - should be invoked when the component mounts
+Done
 
 5. score is incremented on successful card click
     a. ie, a card that has not yet been selected is chosen

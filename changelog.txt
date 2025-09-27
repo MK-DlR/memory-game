@@ -1,3 +1,7 @@
+9/27/25:
+
+- Add fisher-yates shuffle algorithm to randomize card order on click 
+
 9/26/25:
 
 - Add basic onClick event to cards
