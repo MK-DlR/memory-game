@@ -44,7 +44,7 @@ Done
     c. alert to notify user on game win
         c1. if score === 12, you win
     d. display score in scoreboard
-Wip
+Done
 
 6. add styling
     a. header section

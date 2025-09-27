@@ -16,13 +16,11 @@ function getRandomItems(array, count) {
     return shuffled.slice(0, count);
 }
 
-function Cards() {
+function Cards({ currentScore, updateScore, resetGame }) {
     const [allItems, setAllItems] = useState([]);
     const [items, setItems] = useState([]);
     const [dataIsLoaded, setDataIsLoaded] = useState(false);
     const [selectedCard, setSelectedCard] = useState([]);
-    const [currentScore, setCurrentScore] = useState(0);
-    const [highScore, setHighScore] = useState(0);
 
     // useEffect to fetch api
     useEffect(() => {
@@ -57,17 +55,25 @@ function Cards() {
                                 if (selectedCard.includes(item.id)) {
                                     // card was already clicked - game over logic
                                     alert("Game over!");
-                                    if (currentScore > highScore) {
-                                        setHighScore(currentScore);
-                                    }
-                                    setCurrentScore(0); // reset score
+                                    resetGame();
                                     setSelectedCard([]); // clear array
                                     const newRandomSelection = getRandomItems(allItems, 12);
                                     setItems(newRandomSelection);
                                 } else {
                                     // card hasn't been clicked - continue game logic
                                     setSelectedCard([...selectedCard, item.id]); // add selected card to array
-                                    setCurrentScore(currentScore + 1);
+                                    updateScore();
+                                    
+                                    // check win condition using selectedCard length + 1 (to account for react delay)
+                                    if (selectedCard.length + 1 === 12) {
+                                        alert("You win!");
+                                        resetGame();
+                                        setSelectedCard([]); // clear array
+                                        const newRandomSelection = getRandomItems(allItems, 12);
+                                        setItems(newRandomSelection);
+                                        return; // exit early to not shuffle cards
+                                    }
+
                                     // make a copy to not modify the original
                                         const shuffled = [...items];
                                         

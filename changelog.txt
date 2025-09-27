@@ -1,5 +1,7 @@
 9/27/25:
 
+- Add win conditions
+- Lift score states to parent component
 - Notify user on game over
 - Increment score on successful card click
 - Notify user on game over and select new items from API
@@ -10,7 +12,7 @@
 - Add basic onClick event to cards
 - Add basic card styling
 - Randomize chosen items on page refresh
-- Use Bob's Burgers api to create cards
+- Use Bob's Burgers API to create cards
 - Remove placeholder array
 
 9/25/25:
