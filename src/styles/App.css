@@ -1,26 +1,115 @@
 /* App.css */
 
-.card-container {
+/*
+Primary Colors:
+yellow: #EFEF72 / #F8DF26 
+red: #B82210 / #EE2330
+
+Additional Colors:
+dark blue: #2D5CA5
+light blue: #B5CFE6
+maroon: #6A1023
+mustard: #E5BD3D
+tan: #D3A85C
+orange: #DB821F
+*/
+
+@font-face {
+    font-family: 'bobs-burgers';
+    src: url('../assets/fonts/Bobs-Burgers.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'bobs-burgers2';
+    src: url('../assets/fonts/Bobs-Burgers-2.ttf') format('truetype');
+}
+
+h1, h3 {
+    font-family: 'bobs-burgers', sans-serif;
+}
+
+h1 {
+    font-size: 75px;
+    font-family: 'bobs-burgers', sans-serif;
+}
+
+h3 {
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.header-container, h3 {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.header-container {
+    margin-top: 15px;
+    position: relative; 
+}
+
+.header-top {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; 
+    align-items: center;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.header-title {
+    position: relative;
+}
+
+.score-container {
+    font-family: 'bobs-burgers', sans-serif;
+    font-size: 30px;
+    text-align: right;
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%); /* center vertically */
+    right: 0;
+    margin-right: 15px;
+    line-height: 1.2;
+}
+
+.header-description {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.hr-border {
+    border: 2px solid black;
 }
 
 .loading {
     text-align: center;
 }
 
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px; /* allow space for top row of cards on hover */
+    margin-bottom: 20px;
+}
+
 .card-single {
-    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid black;
     border-radius: 5px;
-    width: 280px;
-    height: 370px;
+    width: 277px;
+    height: 390px;
     margin: 15px;
+    margin-bottom: 30px;
     transition: transform 0.3s ease-in-out;
 }
 
 .card-single:hover {
     transform: scale(1.1); /* increase size by 10% */
+    box-shadow: -10px 10px;
+    transition: 0.4s;
 }
 
 .card-image {
@@ -33,7 +122,16 @@
     margin-right: auto;
 }
 
-h3 {
-    text-align: center;
-    margin-top: 15px;
+.card-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1; /* take up the remaining space */
+    margin-top: 0; /* override the h3 margin-top */
+    margin-left: 5px;
+    margin-right: 5px;
+    color: black; 
+    background-color: #F5F5DC; /* placeholder */
+    border-radius: 5px;
+    margin: 5px;
 }

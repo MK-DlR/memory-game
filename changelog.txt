@@ -1,5 +1,7 @@
 9/27/25:
 
+- Adjust card spacing for hover effects
+- Add fonts and adjust font sizes
 - Add win conditions
 - Lift score states to parent component
 - Notify user on game over

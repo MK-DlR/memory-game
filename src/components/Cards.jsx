@@ -88,7 +88,7 @@ function Cards({ currentScore, updateScore, resetGame }) {
                         }
                     >
                         <img src={item.image} alt={item.name} className="card-image"/>
-                        <h3>{item.name}</h3>
+                        <h3 className="card-name">{item.name}</h3>
                     </div>
                 ))}
         </div>

@@ -3,8 +3,8 @@
 function Scoreboard({ currentScore, highScore }) {
     return (
         <div className="score-container">
-            <b>Score:</b> {currentScore}<br />
-            <b>Best Score:</b> {highScore}
+            <strong>Score:</strong> {currentScore}<br />
+            <strong>Best Score:</strong> {highScore}
         </div>
     )
 }
