@@ -40,6 +40,11 @@ Done
     a. ie, a card that has not yet been selected is chosen
     b. game ends on selecting an already selected card
         b1. if highest score, should be logged in "best score"
+        b2. alert to notify user on game over
+    c. alert to notify user on game win
+        c1. if score === 12, you win
+    d. display score in scoreboard
+Wip
 
 6. add styling
     a. header section
@@ -49,7 +54,8 @@ Done
     b. card section
         b1. container itself
         b2. individual cards
-    c. custom font/s?
+    c. custom font/s
+        c1. bob's burgers font
     d. colors
     e. hover/click effects
 Wip

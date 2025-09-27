@@ -1,5 +1,8 @@
 9/27/25:
 
+- Notify user on game over
+- Increment score on successful card click
+- Notify user on game over and select new items from API
 - Add fisher-yates shuffle algorithm to randomize card order on click 
 
 9/26/25:

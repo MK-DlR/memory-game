@@ -1,10 +1,10 @@
 // Scoreboard.jsx
 
-function Scoreboard() {
+function Scoreboard({ currentScore, highScore }) {
     return (
         <div className="score-container">
-            <b>Score:</b> [score variable here]<br />
-            <b>Best Score:</b> [best score variable here]
+            <b>Score:</b> {currentScore}<br />
+            <b>Best Score:</b> {highScore}
         </div>
     )
 }
