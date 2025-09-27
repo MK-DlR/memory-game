@@ -19,7 +19,7 @@ If you are developing a production application, we recommend using TypeScript wi
 
 TOP memory card game project
 
-live preview:
+live preview: https://memory-game-69d.pages.dev/
 
 using react
 and an api

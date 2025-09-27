@@ -1,5 +1,6 @@
 9/27/25:
 
+- Add live preview link
 - Change fonts and colors
 - Adjust card spacing for hover effects
 - Add fonts and adjust font sizes
